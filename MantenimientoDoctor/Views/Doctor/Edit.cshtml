@@ -1,0 +1,54 @@
+﻿@model Doctor
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="row">
+    <div class="col-md-9"></div>
+    <div class="col-md-3">
+        <a style="margin-bottom: 5%" asp-action="Index" class="btn btn-dark float-right">Volver atrás</a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="bg-info text-light card-header">
+        <strong>Edición del doctor @Model.Nombre</strong>
+    </div>
+    <div class="card-body">
+        <form asp-action="Edit" method="post">
+
+            <input type="hidden" asp-for="Id" />
+
+            <div class="mb-3">
+                <label asp-for="Telefono"></label>
+                <input asp-for="Telefono" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Nombre"></label>
+                <input asp-for="Nombre" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Correo"></label>
+                <input asp-for="Correo" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="FechaNacimiento"></label>
+                <input asp-for="FechaNacimiento" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CodigoPostal"></label>
+                <input asp-for="CodigoPostal" class="form-control">
+            </div>
+
+            <div class="text-center mb-3">
+                <button type="submit" class="btn btn-outline-primary">Guardar</button>
+                <button type="reset" class="btn btn-outline-warning">Limpiar</button>
+            </div>
+        </form>
+    </div>
+</div>
